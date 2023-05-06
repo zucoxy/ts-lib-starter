@@ -1,0 +1,56 @@
+{
+  "author": "@unyu <1078119795@qq.com>",
+  "bugs": {
+    "url": "https://github.com/zucoxy/ts-lib-starter/issues"
+  },
+  "description": "",
+  "devDependencies": {
+    "@types/node": "^18.11.9",
+    "@unyu/eslint-config": "^0.1.14",
+    "bumpp": "^8.2.1",
+    "eslint": "^8.28.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "esno": "^0.16.3",
+    "prettier": "^2.8.8",
+    "tsup": "^6.7.0",
+    "typescript": "^4.9.3"
+  },
+  "exports": {
+    "require": "./dist/index.js",
+    "import": "./dist/index.mjs"
+  },
+  "files": [
+    "dist"
+  ],
+  "homepage": "https://github.com/zucoxy/ts-lib-starter#readme",
+  "keywords": [
+    "starter",
+    "ts",
+    "lib",
+    "build"
+  ],
+  "license": "MIT",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "name": "ts-lib-starter",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zucoxy/ts-lib-starter.git"
+  },
+  "scripts": {
+    "dev": "tsup src/index.ts",
+    "build-fast": "tsup src/index.ts --format cjs,esm",
+    "build": "pnpm run build-fast -- --dts-resolve",
+    "start": "esno src/index.ts",
+    "lint": "eslint src --ext .ts,.js",
+    "lint:fix": "eslint src --fix",
+    "prettier": "prettier --write .",
+    "release": "bumpp --commit --push --tag && npm publish"
+  },
+  "types": "./dist/index.d.ts",
+  "version": "1.0.0"
+}
