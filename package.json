@@ -34,7 +34,7 @@
   "license": "MIT",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
-  "name": "ts-lib-starter",
+  "name": "@unyu/pinia-persist-indexdb",
   "publishConfig": {
     "access": "public"
   },
@@ -52,5 +52,5 @@
     "release": "bumpp --commit --push --tag && npm publish"
   },
   "types": "./dist/index.d.ts",
-  "version": "0.0.1-beta.0"
+  "version": "0.0.1-beta.1"
 }
